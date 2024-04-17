@@ -1,0 +1,51 @@
+﻿<Window x:Class="Joc_Dame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Joc_Dame"
+        xmlns:vm="clr-namespace:Joc_Dame.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="850">
+    <Window.DataContext>
+        <vm:GameViewModel />
+    </Window.DataContext>
+
+    <Grid >
+        <Grid Margin="320,124,41,94" IsEnabled="{Binding IsTableActive}" Visibility="{Binding TableVisibility}" >
+            <Image Source="\Assets\Board.png" />
+            <ItemsControl ItemsSource="{Binding Pieces}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="8" Rows="8" Margin="11,0,13,0" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border>
+                            <Border.InputBindings>
+                                <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.PieceClickedCommand, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" CommandParameter="{Binding}" />
+                            </Border.InputBindings>
+                            <Image Source="{Binding ImagePath}" Width="40" Height="40" />
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemContainerStyle>
+                    <Style>
+                        <Setter Property="Canvas.Left" Value="{Binding Position1}" />
+                        <Setter Property="Canvas.Top" Value="{Binding Position2}" />
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+            </ItemsControl>
+        </Grid>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Checkers" VerticalAlignment="Top" Height="65" Width="210" FontSize="48" FontFamily="Arial"/>
+        <Button Command="{Binding StartGameCommand}" Name="NewGameButton"  Content="NewGame" HorizontalAlignment="Left" Margin="74,224,0,0" VerticalAlignment="Top" Height="43" Width="114" />
+        <Button Command="{Binding SaveGameCommand}"  Name="SaveGameButton" Content="SaveGame" HorizontalAlignment="Left" Margin="17,272,0,0" VerticalAlignment="Top" Height="33" Width="114"/>
+        <Button Command="{Binding LoadGameCommand}" Name="LoadGameButton"  Content="LoadGame" HorizontalAlignment="Left" Margin="131,272,0,0" VerticalAlignment="Top" Height="33" Width="114"/>
+        <TextBlock HorizontalAlignment="Left" Margin="17,347,0,0" TextWrapping="Wrap" Text="Current Payer" VerticalAlignment="Top" Height="26" Width="128" FontSize="20" FontFamily="Arial"/>
+        <TextBlock Name="CurrPlayerTXT"  HorizontalAlignment="Left" Margin="150,347,0,0" TextWrapping="Wrap" Text="{Binding CurrentPlayer}" VerticalAlignment="Top" Height="24" Width="114" FontSize="20" FontFamily="Arial"/>
+        <TextBlock HorizontalAlignment="Left" Margin="17,124,0,0" TextWrapping="Wrap" Text="Game Mode" VerticalAlignment="Top" Width="114" Height="27" FontSize="20" FontFamily="Arial"/>
+        
+        <CheckBox IsEnabled="{Binding IsCheckBoxEnabled}"  IsChecked="{Binding IsMultipleJumpsEnabled, Mode=TwoWay}"  Content="Multiple Jumps" HorizontalAlignment="Left" Margin="32,156,0,0" VerticalAlignment="Top" Height="26" Width="156" FontSize="20" FontFamily="Arial"/>
+    </Grid>
+</Window>

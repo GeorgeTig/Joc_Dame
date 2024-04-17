@@ -1,0 +1,16 @@
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\bin\Debug\Joc_Dame.exe.config
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\bin\Debug\Joc_Dame.exe
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\bin\Debug\Joc_Dame.pdb
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\Joc_Dame.csproj.AssemblyReference.cache
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\App.g.cs
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\Joc_Dame_MarkupCompile.cache
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\Joc_Dame_MarkupCompile.lref
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\Joc_Dame.g.resources
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\Joc_Dame.Properties.Resources.resources
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\Joc_Dame.csproj.GenerateResource.cache
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\Joc_Dame.csproj.CoreCompileInputs.cache
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\Joc_Dame.exe
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\Joc_Dame.pdb
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\View\MainWindow.g.cs
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\George\Desktop\git_projects\Joc_Dame\Joc_Dame\Joc_Dame\obj\Debug\View\MainWindow.baml

@@ -55,7 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Model\EColor.cs" />
+    <Compile Include="Model\EPiece.cs" />
+    <Compile Include="Model\GameData.cs" />
+    <Compile Include="Model\Notification.cs" />
+    <Compile Include="Services\GameLogic.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\GameViewModel.cs" />
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,12 +71,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\BoardLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +102,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\BlackKing.png" />
+    <Resource Include="Assets\BlackSoldier.png" />
+    <Resource Include="Assets\RedKing.png" />
+    <Resource Include="Assets\RedSoldier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Empty.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
